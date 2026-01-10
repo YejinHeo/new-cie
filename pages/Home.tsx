@@ -206,7 +206,7 @@ const Home: React.FC = () => {
             <span className='text-black'>당신의 호기심을</span> <br /> <span className="text-blue-600">공학으로 실현하세요.</span>
           </h2>
           <a
-            href="https://www.instagram.com/cie_knu/"
+            href="https://www.instagram.com/knu_cie/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-5 bg-black text-white text-xs font-black rounded-full hover:bg-blue-600 transition-all shadow-2xl tracking-widest uppercase"
