@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-start gap-4 pt-2">
                 <a 
-                  href="https://www.instagram.com/cie_knu/" 
+                  href="https://www.instagram.com/knu_cie/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gray-50 text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-black hover:text-white transition-all"
