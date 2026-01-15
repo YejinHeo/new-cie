@@ -62,7 +62,7 @@ const ClubRoomPage = () => {
               {[
                 "개인 스터디 및 팀 프로젝트 자율 운영",
                 "공용 기자재 사용 후 원위치 및 전원 확인",
-                "커피 및 간식 무제한 제공 (청결 유지 필수)",
+                "개인 컵 사용 및 뒷정리 철저 (간식 반입 가능)",
                 "외부인 동반 입장 시 사전 승인 요망"
               ].map((rule, i) => (
                 <div key={i} className="flex gap-4 border-b border-gray-100 pb-6">

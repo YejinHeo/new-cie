@@ -72,7 +72,7 @@ const Header: React.FC = () => {
                 </div>
               )}
             </div>
-
+            <Link href="/Clubroom" className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${isActivePath('/activity') ? 'bg-gray-800 text-white' : 'text-gray-400 hover:text-white'}`}>동아리방</Link>
             <Link href="/activity" className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${isActivePath('/activity') ? 'bg-gray-800 text-white' : 'text-gray-400 hover:text-white'}`}>활동 갤러리</Link>
             <Link href="/Projects" className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${isActivePath('/Projects') ? 'bg-gray-800 text-white' : 'text-gray-400 hover:text-white'}`}>프로젝트</Link>
           </nav>
@@ -113,7 +113,9 @@ const Header: React.FC = () => {
               <Link href="/Members/Students" className="block px-3 py-2 text-sm text-gray-400 hover:text-white">재학생</Link>
             </div>
           </div>
-
+          <Link href="/Clubroom" className={`block px-3 py-2 rounded-md text-base font-bold ${isActivePath('/activity') ? 'bg-gray-800 text-white' : 'text-gray-400'}`}>
+            동아리방
+          </Link>
           <Link href="/activity" className={`block px-3 py-2 rounded-md text-base font-bold ${isActivePath('/activity') ? 'bg-gray-800 text-white' : 'text-gray-400'}`}>
             활동 갤러리
           </Link>
