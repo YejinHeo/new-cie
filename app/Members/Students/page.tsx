@@ -37,7 +37,7 @@ export default async function StudentsPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-white font-sans selection:bg-blue-100">
+    <div className="min-h-screen flex flex-col bg-white selection:bg-blue-100">
       <main className="grow pt-32 pb-40 px-4">
         <div className="max-w-4xl mx-auto">
           {/* 헤더 섹션 */}

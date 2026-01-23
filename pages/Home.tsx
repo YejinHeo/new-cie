@@ -8,10 +8,10 @@ const Home: React.FC = () => {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 text-blue-600 text-[10px] font-black tracking-[0.3em] uppercase animate-fade-in">
-            Established 2026
+            Established 2024
           </div>
 
-          {/* 🔥 간격이 완벽하게 교정된 CIE 타이틀 */}
+          {/* 간격이 완벽하게 교정된 CIE 타이틀 */}
           <div className="group relative mb-16 cursor-default select-none h-50 md:h-75 flex items-center justify-center">
             <h1 className="relative flex flex-col items-center text-6xl md:text-8xl font-black text-black tracking-tighter uppercase leading-none transition-all duration-1000 group-hover:flex-row group-hover:gap-12 md:group-hover:gap-20">
               

@@ -1,13 +1,18 @@
 /* Tailwind v4의 표준 임포트 방식입니다 */
 @import "tailwindcss";
-
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
 @plugin "@tailwindcss/typography";
-
+/*'Inter', system-ui, sans-serif;*/
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'NexonLv1Gothic';
   }
   
   body {
