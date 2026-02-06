@@ -49,12 +49,13 @@ export default async function ProjectsPage({
     });
   }
 
-  // 3. 필터링 로직
-  const filteredProjects = selectedYear === 'all'
+// 3. 필터링 및 프로젝트 정렬 (최신 연도가 맨 위로 오도록)
+  const filteredProjects = (selectedYear === 'all'
     ? allProjects
-    : allProjects.filter(p => p.year === selectedYear);
+    : allProjects.filter(p => p.year === selectedYear)
+  ).sort((a, b) => b.year.localeCompare(a.year)); // 프로젝트 카드 자체를 최신순 정렬
 
-  // 4. 연도 목록 생성 (내림차순 정렬)
+  // 4. 연도 목록 생성 (내림차순 정렬 - 최신 연도가 맨 앞)
   const availableYears = Array.from(new Set(allProjects.map(p => p.year)))
     .filter(y => y !== '')
     .sort((a, b) => b.localeCompare(a));

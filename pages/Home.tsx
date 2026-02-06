@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 text-blue-600 text-[10px] font-black tracking-[0.3em] uppercase animate-fade-in">
-            Established 2024
+            Established 2025
           </div>
 
           {/* 간격이 완벽하게 교정된 CIE 타이틀 */}
