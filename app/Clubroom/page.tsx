@@ -82,7 +82,7 @@ const ClubRoomPage = () => {
           <h2 className="text-3xl font-bold text-gray-900 font-healthset">공간 아카이브 준비 중</h2>
           <p className="text-gray-400 mt-4 font-healthset">새로운 장비 도입과 리모델링 사진을 정리하고 있습니다.</p>
         </section>
-      </main>
+              </main>
     </div>
   );
 };
