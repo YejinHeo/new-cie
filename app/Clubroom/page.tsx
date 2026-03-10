@@ -74,14 +74,6 @@ const ClubRoomPage = () => {
           </div>
         </section>
 
-        {/* 갤러리 준비 섹션 */}
-        <section className="py-40 px-6 text-center">
-          <div className="animate-pulse mb-8 inline-block px-4 py-1 rounded-full border border-blue-100 text-blue-600 text-xs font-bold tracking-widest uppercase">
-            Coming Soon
-          </div>
-          <h2 className="text-3xl font-bold text-gray-900 font-healthset">공간 아카이브 준비 중</h2>
-          <p className="text-gray-400 mt-4 font-healthset">새로운 장비 도입과 리모델링 사진을 정리하고 있습니다.</p>
-        </section>
               </main>
     </div>
   );
