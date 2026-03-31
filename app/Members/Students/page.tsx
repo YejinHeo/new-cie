@@ -19,8 +19,11 @@ export default async function StudentsPage() {
   const peopleDir = path.join(process.cwd(), 'StudentData');
   
   let peopleData: Member[] = [];
+  
   if (fs.existsSync(peopleDir)) {
     const files = fs.readdirSync(peopleDir).filter(f => f.endsWith('.md'));
+    
+    // 1. 데이터 파싱
     peopleData = files.map((file) => {
       const filePath = path.join(peopleDir, file);
       const content = fs.readFileSync(filePath, 'utf8');
@@ -33,6 +36,27 @@ export default async function StudentsPage() {
         major: data.major || '',
         email: data.email || '',
       };
+    });
+
+    // 2. 직책 우선순위 + 가나다 순 정렬
+    peopleData.sort((a, b) => {
+      // 직책별 우선순위 설정 (숫자가 작을수록 위로 올라감)
+      const getPriority = (position: string) => {
+        if (position === '회장') return 1;
+        if (position === '부회장') return 2;
+        return 3; // 그 외 일반 멤버
+      };
+
+      const priorityA = getPriority(a.position);
+      const priorityB = getPriority(b.position);
+
+      // 우선순위가 다르면 우선순위 순으로 정렬
+      if (priorityA !== priorityB) {
+        return priorityA - priorityB;
+      }
+
+      // 우선순위가 같으면(둘 다 일반 멤버거나 둘 다 부회장이면) 가나다순 정렬
+      return a.name.localeCompare(b.name, 'ko');
     });
   }
 
@@ -48,7 +72,7 @@ export default async function StudentsPage() {
             <div className="w-12 h-1 bg-gray-900 mx-auto mb-6"></div>
           </header>
           
-          {/* 리스트 영역: 요청하신 테이블 스타일 적용 */}
+          {/* 리스트 영역 */}
           <div className="flex flex-col items-center gap-10">
             {peopleData.length === 0 ? (
               <p className="text-gray-400 py-20">등록된 멤버 정보가 없습니다.</p>
